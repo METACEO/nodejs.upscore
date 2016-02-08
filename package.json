@@ -1,0 +1,43 @@
+{
+  "name": "upscore",
+  "version": "1.0.0",
+  "engines": {
+    "node": "*"
+  },
+  "description": "Module to provide back Underscore templates on updated files.",
+  "main": "./api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/METACEO/nodejs.upscore.git"
+  },
+  "keywords": [
+    "fs",
+    "stat",
+    "template",
+    "underscore",
+    "upscore",
+    "watch",
+    "watchFile"
+  ],
+  "bin": {},
+  "author": {
+    "name": "James Allen",
+    "email": "com.npmjs@meta.ceo",
+    "url": "https://github.com/metaceo"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "preferGlobal": false,
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "bugs": {
+    "url": "https://github.com/METACEO/nodejs.upscore/issues"
+  },
+  "homepage": "https://github.com/METACEO/nodejs.upscore#readme"
+}
