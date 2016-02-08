@@ -21,7 +21,8 @@ function upscore(
   );
 }
 
-upscore.interval = 1000;
+upscore.initialize = true;
+upscore.interval   = 1000;
 
 function stat(
   file,
@@ -41,6 +42,11 @@ function stat(
       "persistent": false
     },
     watch.bind(null,file,callback)
+  );
+  
+  if(upscore.initialize === true) STAT(
+    file,
+    execute.bind(null,file,callback)
   );
 }
 
