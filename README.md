@@ -20,8 +20,10 @@ Provide Upscore a file path and a callback. When the file is modified the callba
 var upscore = require("upscore");
 
 /* The file below will be made into an Underscore
-// template when it is updated and right after the
-// initial Upscore call.
+// template when a poll is made and a change is
+// found. With default Upscore settings, as below,
+// initialization will call the newTemplate function
+// (this saves us unnecessary reads and templating.)
 */
 
 upscore("./template.html",newTemplate);
@@ -39,11 +41,10 @@ function newTemplate(
 ```javascript
 'use strict';
 
-/* All files after overriding Upscore's
-// initialization will NOT be made into
-// Underscore templates, only AFTER the
-// files have been updated will they be
-// made into Underscore templates.
+/* All future files will not be automatically
+// made into Underscore templates. This will
+// not change the initialization of previously
+// Upscore'd files.
 */
 
 var upscore = require("upscore");
@@ -56,10 +57,10 @@ upscore.initialize = false;
 ```javascript
 'use strict';
 
-/* This will change all Upscore'd files
-// to poll every 100 milliseconds, only
-// ones that occur after this property
-// override.
+/* This will have all future Upscore'd files
+// poll for changes every 100 milliseconds.
+// This will not change the polling interval
+// of previously Upscore'd files.
 */
 
 var upscore = require("upscore");
