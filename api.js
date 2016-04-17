@@ -15,6 +15,12 @@ function upscore(
   
   if(typeof callback !== "function") throw new Error("The callback must be a function.");
   
+  /* Dereference and free our
+  // `file` argument before
+  // being bound (substring.)
+  */
+  file = file.substring(0);
+  
   STAT(
     file,
     stat.bind(null,file,callback)
